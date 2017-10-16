@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>jQuery轻量级响应式幻灯片插件EasyFader演示-响应式_dowebok</title>
+<link rel="stylesheet" href="http://www.dowebok.com/demo/222/css/jquery.easyfader.css">
+</head>
+
+<body>
+<h1>响应式</h1>
+
+<div id="dowebok" class="fader">
+    <img class="slide" src="images/img1.jpg">
+    <img class="slide" src="images/img2.jpg">
+    <img class="slide" src="images/img3.jpg">
+    <div class="fader_controls">
+        <div class="page prev" data-target="prev">&lsaquo;</div>
+        <div class="page next" data-target="next">&rsaquo;</div>
+        <ul class="pager_list"></ul>
+    </div>
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://www.dowebok.com/demo/222/js/jquery.easyfader.min.js"></script>
+<script>
+$(function() {
+	$('#dowebok').easyFader();
+});
+</script>

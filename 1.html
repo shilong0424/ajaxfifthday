@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="../jquery.js"></script>
+	<script>
+	$(function(){
+		$('#btn').click(function(){
+			$.ajax({
+				type:'get',
+				url:'http:/jerry.com/data1.php',
+				dataType:'jsonp',
+                jsonp:'callback',//jsonp属性的作用就是自定义参数名字（callback=abc 这里的名字指的是等号前面的键，后端根据这个键获取方法名，jquery的默认参数名称是callback）
+                jsonpCallback:'abc',//这个属性的作用就是自定义回调函数的名字（callback=abc ，这里的名字指的是等号后面的值）
+                data:{},
+				seccess:function(data){
+				console.log(data);					
+				}
+			});
+
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="button" value="点击" id="btn">
+</body>
+</html>

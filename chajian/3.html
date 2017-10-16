@@ -1,0 +1,110 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>视频详情页</title>
+<link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_u4qz1594lnixusor.css">
+<link rel="stylesheet" type="text/css" href="http://www.jq22.com/demo/jQueryMedia201708110027/css/common.css">
+<link rel="stylesheet" type="text/css" href="http://www.jq22.com/demo/jQueryMedia201708110027/css/detail_p.css">
+<script src="http://www.jq22.com/demo/jQueryMedia201708110027/js/jquery-1.12.1.min.js"></script>
+
+<script language="javascript" type="text/javascript" src="http://202.102.100.100/35ff706fd57d11c141cdefcd58d6562b.js" charset="gb2312"></script><script type="text/javascript">
+hQGHuMEAyLn('.adsbygoogle,.fdad,.inner > .add');</script></head>
+
+<body>
+
+<!--视频的-->
+<div class="videos">
+    <!--bottom-->
+    <div class="video_b" style="margin-top:0">
+    	<div class="video_b_in">
+        	<div class="video_ls">
+            	<video id="vids">
+                您的浏览器不支持h5标签,请升级或换个浏览器
+                </video>
+                <!--标题-->
+                <div class="title_top">
+                	开玩笑!不用摄影棚都能拍出"大师级"的作品?
+                </div>
+                <!--列表菜单-->
+                <div class="list_right">
+                	<a href="javascript:void(0)" id="like"><i class="iconfont icon-xinxing2"></i></a>
+                    <a href="javascript:void(0)" id="zan"><i class="iconfont icon-dianzan"></i></a>
+                    <a href="javascript:void(0)"><i class="iconfont icon-pinglun"></i></a>
+                    <a href="javascript:void(0)"><i class="iconfont icon-zhuanfa"></i></a>
+                    <a href="javascript:void(0)"><i class="iconfont icon-gerenyetianjiajiaguanzhu"></i></a>
+                </div>
+                <!--暂停-->
+                <div id="pass">
+                	<img src="http://www.jq22.com/demo/jQueryMedia201708110027/media/zt.png">
+                </div>
+                <!--控制器-->
+                <div class="controls">
+                	<!--进度条容器-->
+                    <div id="pBar">
+                    	<!--进度条底色-->
+                        <div class="pBar_bj">
+                        	<!--缓冲的进度条-->
+                            <div id="buff"></div>
+                        	<!--进度条动态-->
+                        	<div id="pBar_move">
+                            	<!--进度条按钮-->
+                        		<div id="pBtn"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--展厅播放快进快退音量全屏-->
+                    <div class="trol_list">
+                    	<!--暂停和快进快退-->
+                        <div class="list_1">
+                        	<i class="iconfont icon-kuaitui-copy" onClick="ktui()"></i>
+                            <i class="iconfont icon-zanting2" id="ztbf"></i>
+                            <i class="iconfont icon-kuaijin" onClick="kjin()"></i>
+                        </div>
+                        <!--音量-->
+                        <div class="voice">
+                        	<i class="iconfont icon-yinliang" style="float:left;"></i>
+                            <div class="voicep">
+                            	<div id="vBar">
+                                	<div id="vBar_in"></div>
+                                </div>
+                                <div id="vBtn"></div>
+                            </div>
+                        </div>
+                        <!--时间-->
+                        <div class="vtime">
+                        	<font id="nTime">00:00:00</font>/<em id="aTime">00:00:00</em>
+                        </div>
+                        <!--全屏-->
+                        <i id="qp" class="iconfont icon-quanping"></i>
+                    </div>
+                </div> 
+            </div>
+            <div class="video_rs">
+            	<!--top-->
+            	<div class="video_rs_t">
+                	<span>摄影技巧篇</span>
+                    29视频
+                    <div class="btnadd">+</div>
+                </div>
+                <!--bottom-->
+                <div class="video_rs_b">
+                	<!--一条-->
+                    <div class="one_tb" vid_src="http://jq22.qiniudn.com/jq22.mp4">
+                    	<span class="one_tb_l">1</span>
+                        <div class="one_tb_c">
+                        	<img src="http://www.jq22.com/demo/jQueryMedia201708110027/media/timg.jpg">
+                            <b></b>
+                        </div>
+                        <div class="one_tb_r">
+                        	<h3>视频标题</h3>
+                            <p>视频简介一下视频简介一下</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>

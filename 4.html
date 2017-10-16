@@ -1,0 +1,47 @@
+<!-- https://stat.y.qq.com/ext/fcgi-bin/fcg_web_access_stat.fcg?pid=3&os=windows&cgi=%2F%2Fc.y.qq.com%2Fsplcloud%2Ffcgi-bin%2Fsmartbox_new.fcg&code=0&time=95&rate=10
+<!DOCTYPE html> -->
+<!-- https://shc.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg?is_xml=0&format=jsonp&key=%E5%A5%BD%E5%A3%B0%E9%9F%B3&g_tk=5381&jsonpCallback=SmartboxKeysCallbackmod_top_search7301&loginUin=0&hostUin=0&format=jsonp&inCharset=utf8&outCharset=utf-8&notice=0&platform=yqq&needNewCode=0 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>qq音乐案例</title>
+	<style> 
+		#container {
+			height: 300px;
+			width: 400px;
+			background-color: lightgreen;
+			margin: 0 auto ;
+			text-align: center;
+		}
+	</style>
+	<script src="jquery.js"></script>
+	<script>
+	$(function(){
+		$('#search').keyup(function(){
+			var dat = $(this).val();
+			$.ajax({
+				url:'https://shc.y.qq.com/splcloud/fcgi-bin/smartbox_new.fcg',
+				dataType:'jsonp',
+				jsonpCallback : 'SmartboxKeysCallbackmod_top_search7301',//每次给鞥新jsonCallback 都是一样动态更新的 ,所以没法用
+				data:{key:dat,
+g_tk:5381,
+loginUin:0,
+hostUin:0,
+notice:0,
+needNewCode:0},
+				success:function(data){
+					console.log(data);
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<input type="text" id="search"> 
+		<input type="button" value="搜索">
+		<div id="info"></div>
+	</div>
+</body>
+</html>

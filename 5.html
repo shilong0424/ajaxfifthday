@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="jquery.js"></script>
+	<script>
+	$(function(){
+		$('#btn').click(function(){
+			$.ajax({
+				type:'get',
+				url:'http://v.juhe.cn/weather/index',
+				dataType:'jsonp',
+				data:{cityname:Y,
+					dtype:N,
+					format:N,
+				},
+				success:function(data){
+					console.log(data);
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<input type="text"  id="search">
+	<input type="button" value="点击" id="btn">
+</body>
+</html>

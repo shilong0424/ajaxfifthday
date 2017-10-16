@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>案例</title>
+	<style> 
+		#container {
+			height: 300px;
+			width: 400px;
+			background-color: lightgreen;
+			margin: 0 auto ;
+			text-align: center;
+		}
+	</style>
+	<script src="jquery.js"></script>
+	<script>
+	/*https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?  "wd"  =%E6%89%93%E7%9A%84&json=1&p=3&sid=1455_21078_22158&req=2&csor=2&pwd=dd& " cb "  =jQuery1102029078455459771546_1504444840706&_=1504444840712*/
+	$(function(){
+		$('#search').keyup(function(){
+			var val = $(this).val();
+			$.ajax({
+				url:'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su',
+				jsonp:'cb',
+				data:{wd:val},
+				dataType:'jsonp',
+				success:function(data){
+					var dat = data.s;
+					var tag = '<ul>';
+					$.each(dat,function(i,e){
+						tag += '<li>'+e+'</li>';
+					});
+					tag+='</ul>';
+					//把拼接好的tag放到info的div当中
+					$('#info').html(tag);
+				}
+			});
+		});
+	});
+	</script>
+</head>
+<body>
+	<div id="container">
+		<input type="text" id="search"> 
+		<input type="button" value="搜索">
+		<div id="info"></div>
+	</div>
+</body>
+</html>
